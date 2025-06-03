@@ -42,14 +42,13 @@ body {
   border: 3px solid white;
 }
 
-/* Dropdown Profil */
-.dropdown {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.dropdown-toggle {
+.user-image {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -57,44 +56,31 @@ body {
   border: 3px solid white;
 }
 
-.dropdown-menu {
-  position: absolute;
-  right: 0;
-  top: 70px;
-  background-color: #ffffff;
-  min-width: 180px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  overflow: hidden;
-  display: none;
-  z-index: 100;
+.text-info {
+  text-align: right;
 }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.username {
-  padding: 12px 16px;
+.name {
   margin: 0;
   font-weight: bold;
-  border-bottom: 1px solid #ddd;
-  color: black;
-}
-
-.logout-btn {
-  width: 100%;
-  padding: 12px 16px;
-  border: none;
-  background-color: #ff4d4d;
   color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-.logout-btn:hover {
-  background-color: #e60000;
+.division {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+}
+
+#datetime {
+  font-size: 0.95rem;
+  margin-top: 5px;
+  color: #f0f0f0;
 }
 
 /* Input Area */
@@ -169,6 +155,56 @@ textarea:focus {
 }
 
 /* Todo List Container */
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tab {
+  padding: 8px 16px;
+  border: 1px solid #2575fc;
+  background-color: white;
+  color: #2575fc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.tab:hover {
+  background-color: #2575fc;
+  color: white;
+}
+
+.tab.active {
+  background-color: #2575fc;
+  color: white;
+}
+
+#clear-all {
+  padding: 8px 16px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#clear-all:hover {
+  background-color: #d93636;
+}
+
 #container-todo {
   border-top: 1px solid #eee;
   padding-top: 20px;
@@ -190,4 +226,27 @@ textarea:focus {
 
 #todo-ul li:hover {
   background-color: #e0ecff;
+}
+
+/* priority */
+.priority-label {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.priority-low {
+  background-color: green;
+}
+
+.priority-medium {
+  background-color: orange;
+}
+
+.priority-high {
+  background-color: red;
 }
